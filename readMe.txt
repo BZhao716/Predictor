@@ -2,11 +2,11 @@
                                 (version 1.0 2022/06/05)
 
 1 Description    
-    DisorderBind is an accurate sequence-based predictor for identifying disordered binding residues and disordered protein-binding residues
+    DisoBindPred is an accurate sequence-based predictor for identifying disordered binding residues and disordered protein-binding residues
 	
 2 Installation
-    DisorderBind is built on Python3.
-    We highly recommend to use a virtual environment for the installation of DisorderBind.
+    DisoBindPred is built on Python3.
+    We highly recommend to use a virtual environment for the installation of DisoBindPred.
 
 2.1 Create an virth environment
 	Note: Before create the virth enviroment, make sure conda is installed. Otherwise, install Miniconda (https://conda.io/en/latest/miniconda.html) for conda.     
@@ -16,17 +16,17 @@
 
     A virtual environment can be created and (de)activated as follows by using conda(https://conda.io/docs/):
 	# create the virth environment disorderbind
-	$ conda create -n disorderbind python=3.8.12
-	# activate the virth environment disorderbind
-	$ source activate disorderbind
+	$ conda create -n DisoBindPred  python=3.8.12
+	# activate the virth environment DisoBindPred 
+	$ source activate DisoBindPred 
 		# install package for machine learning algorithms
 		$ conda install scikit-learn==0.24.2 kares==2.4.0 numpy==1.18.5 tensorflow==2.3.0
-	#deactivate after finish the installation of DisorderBind
+	#deactivate after finish the installation of DisoBindPred 
 	$source deactivate
 
 2.2 Install tools and database
 
-	Note: $path is the absolute path for DisorderBind installation
+	Note: $path is the absolute path for DisoBindPred installation
 
 	2.2.1 All required tools
 	(1) Check tcsh-6.21.00 in $path/programs/tcsh-6.21.00 for usage of PsiPred. If need, please recompile in the given directory. 
@@ -54,9 +54,9 @@
 		$ tar xvfz uniclust30_2018_08_hhsuite.tar.gz
 	
 
-2.3 Compile the scripts for DisorderBind
+2.3 Compile the scripts for DisoBindPred 
 
-	Note: $path is the absolute path for DisorderBind installation
+	Note: $path is the absolute path for DisoBindPred installation
 	
 	(1) compile aln_ver2.sh
 		$ cd $path
@@ -67,17 +67,17 @@
 		$ cd $path
 		$ gcc -O3 -ffast-math cov231stats.c -o cov231stats
 
-	(3) change the directory of environment to the virth environment DisorderBind
-	 	e.g. source ~/miniconda3/bin/activate ~/miniconda3/envs/DisorderBind #change the environment directory
+	(3) change the directory of environment to the virth environment DisoBindPred 
+	 	e.g. source ~/miniconda3/bin/activate ~/miniconda3/envs/DisoBindPred #change the environment directory
 
 
-2.4 Run DisorderBind
+2.4 Run DisoBindPred 
 
-	Note: $path is the absolute path for DisorderBind installation. Input_file should be in FASTA format. 
+	Note: $path is the absolute path for DisoBindPred installation. Input_file should be in FASTA format. 
 		
 	To run the predictor, please use the following command.
 		$ python run_binding_predictor.py test_seq.txt $path test_output(where output will be saved)	
-		Note: $path is where the DisorderBind installed. 
+		Note: $path is where the DisoBindPred installed. 
 
 2.5 The test input file (test_seq.txt) and outputs are saved in $path/test_output
 
