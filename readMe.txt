@@ -41,7 +41,7 @@
 	2.2.2 Databases
 
 	Note: Please prepare two databases that are used for mmseqs and hhblits in $path/database.  
-		
+	# create directory database in $path
 
 	(1) Please download database Uniref90 from (ftp://ftp.ncbi.nlm.nih.gov/blast/db/).
 		# save in the directory $path/database/mmseqs_db
